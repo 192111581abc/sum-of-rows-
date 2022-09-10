@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int i, j, rows, columns, rowsum, columnsum;
+	
+	cout << "\nPlease Enter the Matrix rows and Columns =  ";
+	cin >> i >> j;
+	
+	int sumRCArray[i][j];
+	
+	cout << "\nPlease Enter the Matrix Items =  ";
+	for(rows = 0; rows < i; rows++)	{
+		for(columns = 0; columns < i; columns++) {
+			cin >> sumRCArray[rows][columns];
+		}		
+	}
+	
+	for(rows = 0; rows < i; rows++)
+  	{
+  		rowsum = columnsum = 0;
+  		for(columns = 0; columns < j; columns++)
+  		{
+  			rowsum = rowsum + sumRCArray[rows][columns];
+  			columnsum = columnsum + sumRCArray[columns][rows];
+		}
+   		cout << "\n\nThe Sum of Items in " << rows + 1<< " Row of a Matrix = " << rowsum ;
+   		cout << "\nThe Sum of Items in Column of a Matrix = " << columnsum ;
+  	}
+
+ 	return 0;
+}
+
+
+
